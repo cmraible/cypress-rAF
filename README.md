@@ -5,7 +5,10 @@
 3. `npm run start` to run the dev server
 4. `npx cypress open` to open the cypress test runner
 5. run tests
-6. open js console to see any adjacent animationFrames with elapsed time > 17 ms, grouped by most recent window.blur and window.focus events
+6. Background the window by minimizing or switching to a different window.
+7. open js console to see any consecutive animationFrames with elapsed time > 17 ms, grouped by most recent window.blur and window.focus events
+
+On my computer (macOS 10.15), it will only log elapsed times > 17 ms in a "blurred" group. Once focused, animationFrames reliably render at 16.6667 ms intervals.
 
 
 # src/App.js
